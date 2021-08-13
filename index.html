@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html class="main-screen">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<!-- Tamika Dantes -->
+<body class="main-screen">
+	<script src="mainScreen.js"></script>
+
+  <div class="splash">
+    <div id="sp1">
+      <img id="portal" src="images/main_screen/front portal.png" alt="" height="790px" width="930px">
+    </div>
+    
+    <div id="sp2">
+      <img class="fade-in" src="images/main_screen/blips and chitz logo.png" alt="">
+      <h3 id="tag-line-1" class="fade-in">Squirt, Squeeze, Spray and Play!</h3>
+      <h1 id="tag-line-2" class="fade-in">All Day!</h1>
+    </div>
+  </div>
+
+  <!-- arcade machine -->
+	<div id="arcade-machine">
+		<div id="top">
+      <div id="sticky-note">
+        <p id="sn-title">Retrieved Codes</p>
+        <!-- first div shows keycode1 -->
+        <div id="codeFtPart" style="display:inline-block"></div>
+        <!-- second keycode2 -->
+        <div id="codeScPart" style="display:inline-block" ></div>
+
+      </div>
+    </div>
+
+    
+
+		<div id="bottom-of-top"></div>
+
+		<div id="outter-screen">
+			<div id="inner-screen">
+				<p id="game-title" style="margin-bottom:-7vh;">Code-Quest</p>
+				<p  style="margin-bottom:-5vh;">
+          <a id="speedTyping" href="speedTyping.html" class="game-selection">Prison-Break</a></p>
+				<p  style="margin-bottom:-5vh;">
+          <a id="TTT" href="TTT.html" class="game-selection">Wrenchs & Gears</a></p>
+				<p style="margin-bottom:-5vh;">
+          <a id="dotChase" href="dotChase.html" class="game-selection" >WIP-Dot Chase</a>
+        </p>
+				<p id="c-p-select">Code Panel</p>
+			</div>
+		</div>
+
+		<div id="control-panel"></div>
+	</div>
+  
+ 
+  
+  <!-- code panel -->
+	<div id="code-panel" class="container">
+
+    <!-- get rid of button below when done testing session storage -->
+    <button id="resetStorage">reset session storage</button>
+    <!-- todelete above -->
+    
+    <p id="testing" class="row col s12"></p>
+		<!-- display -->
+		<div class="row">
+			<!-- <form id="num-display" class="col s12" action="">
+				<input id="num-text" type="number">
+      </form> -->
+      <div id="num-display">
+        <div id="num-text">
+          ****
+        </div>
+      </div>
+    </div>
+    
+    <!-- first row of numbers -->
+    <div class="row">
+      <p id="num1" class="numButton btn-large col s4" style="margin-top:-3px;">1</p>
+      <p id="num2" class="numButton btn-large col s4" style="margin-top:-3px">2</p>
+      <p id="num3" class="numButton btn-large col s4" style="margin-top:-3px">3</p>
+    </div>
+
+    <!-- second row of numbers -->
+    <div class="row">
+      <p id="num4" class="numButton btn-large col s4" style="margin-top:-20px">4</p>
+      <p id="num5" class="numButton btn-large col s4" style="margin-top:-20px">5</p>
+      <p id="num6" class="numButton btn-large col s4" style="margin-top:-20px">6</p>
+    </div>
+
+    <!-- third row of numbers -->
+    <div class="row">
+      <p id="num7" class="numButton btn-large col s4" style="margin-top:-20px">7</p>
+      <p id="num8" class="numButton btn-large col s4" style="margin-top:-20px">8</p>
+      <p id="num9" class="numButton btn-large col s4" style="margin-top:-20px">9</p>
+    </div>
+
+    <!-- fourth row of numbers and clear/submit-->
+    <div class="row">
+      <p id="clear-btn" class="btn-large col s4" style="margin-top:-20px; margin-bottom:-10px;">clear</p>
+      <p id="num0" class="numButton btn-large col s4" style="margin-top:-20px; margin-bottom:-10px;">0</p>
+      <p id="submit-btn" class="btn-large col s4" style="margin-top:-20px; margin-bottom:-10px;">submit</p>
+    </div>
+
+    
+  
+  
+</body>
+</html>

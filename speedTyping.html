@@ -1,0 +1,120 @@
+ <!DOCTYPE html>
+<html class="speed-typing">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="speedTyping.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+
+	</script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+
+	</script>
+</head>
+<!-- Tamika Dantes -->
+<body class="speed-typing">
+	<script src="speedTyping.js"></script>
+
+  <!-- start button with instructions -->
+	<div class="screenCover" id="screenCover">
+		<div id="speed-typing-start-screen" class="container">
+			<div id="speed-typing-instructions" class="row">
+				<h4 style="text"> Instructions:</h4>
+			<!--	<p>
+					Latin Latin Latin
+				</p> -->
+
+        <ul>
+          <li>Each prisoner is assigned a Prisoner ID#, which can be seen to the bottom of their respective image. To complete this task, hack into the Galactic Federation Prisoner Database. You must free at least 3 prisoners from captivity, by typing in their Prisoner ID#, within 30 seconds.</li>
+
+
+
+          <!-- <li>Free the prisoners by typing the code at the bottom of the image.</li>
+          <li>Free at least three prisoners and you win.</li> -->
+          <br>
+          <li>Don't free enough, you get caught and probably executed by vaporization.</li>
+          <br>
+          <li> Good Luck!</li>
+        </ul>
+			</div>
+
+			<div class="row">
+				<button class="start btn col s4 offset-s4">
+          Start Game
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- congratulation screen with back buttton -->
+	<div class="congratulation-screen">
+   <h4 id="lost">You've been caught!</h4>
+   <p id="win" >Do you want to</p>
+   <p id="spCode"></p>
+    <div class="back-button">
+      <a class="btn" href="index.html">Go Back</a>
+    </div>
+    <div class="reset">
+      <a class="btn" id="reset">Try Again</a>
+    </div>
+  </div>
+
+  <h6 id="prisoner-database-title" >Galactic Federation Prisoner Database</h6>
+  
+    
+  <div class="row" style="padding=0">
+    <a class="col s1" href="index.html"><img id="red-return-arrow" src="images/speed_typing/red return arrow.png" alt=""></a>
+    <div class="col s1 offset-s4">
+      <div class="row">
+        <div class="col s1 offset-s11">
+          <div id="timer"></div>
+        </div>
+      </div>
+    </div>
+      
+
+  </div>
+  
+
+ 
+
+  <div id="prison-screen-content">
+    <!-- <h6 id="prisoner-database-title" >Galactic Federation Prisoner Database</h6> -->
+
+     <!--Timer-->
+  <!-- <div id="timer">
+    <!-- <h3 ></h3> -->
+  <!-- </div> --> 
+    <div id="inmate-pic" >
+      <!--Placeholder-->
+      <img src="" alt="" id="picture" height="594px">
+      <h4 id="prisoner-id-on-pic"></h4>
+    </div>
+
+    <div id="inmate-info-screen">
+      <h4>//Prisoner ID#</h4>
+      <form class="prisoner-id" id="disableDefault" action="" autocomplete="off">
+        <input id="prisoner-id-info" class="prisoner-id" type="text" value="">
+      </form>
+    
+      <h4>//Species:</h4>
+      <h5 id="species-info">Lorem</h5>
+  
+      <h4>//Home Planet:</h4>
+      <h5 id="home-planet-info">ipsum</h5>
+    
+      <h4>//Wanted For:</h4>
+      <h5 id="wanted-for-info">dolor sit amet, consectetur adipiscing elit</h5>
+    </div>
+  </div >
+
+	<!-- <a href="index.html"><img id="green-return-arrow" src="images/speed_typing/green return arrow.png" alt=""></a> -->
+  </body>
+</html>

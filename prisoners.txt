@@ -1,0 +1,48 @@
+ let prisonerPool = [
+    //1
+    {idNum: "GA-8173-B", specices: "Garblovians", homePlanet: "Glaagablaaga", crime: "Redacted", img: "images/speed_typing/prisoners/Garblovians.png"},
+
+    //2
+    {idNum: "ZI-9897-V", specices: "Zigerions", homePlanet: "Zigerion", crime: "Redacted", img: "images/speed_typing/prisoners/Zigerions.png"},
+
+    //3
+    {idNum: "ME-8392-C", specices: "Meeseeks", homePlanet: "Mr. Meeseeks Box", crime: "Redacted", img: "images/speed_typing/prisoners/Meeseeks.png"},
+    
+    //4
+    {idNum: "FL-7504-X", specices: "Flansians", homePlanet: "Flansia", crime: "Redacted", img: "images/speed_typing/prisoners/Flansians.png"},
+    
+    //5
+    {idNum: "SH-8556-I", specices: "Shipzuvians", homePlanet: "Shipzuvia", crime: "Redacted", img: "images/speed_typing/prisoners/Shipzuvians.png"},
+    
+    //6
+    {idNum: "HA-1677-S", specices: "Hambrosians", homePlanet: "Haamden", crime: "Redacted", img: "images/speed_typing/prisoners/Hambrosians.png"},
+    
+    //7
+    {idNum: "ZO-5983-U", specices: "Zombodians", homePlanet: "Zombodia", crime: "Redacted", img: "images/speed_typing/prisoners/Zombodians.png"},
+    
+    //8
+    {idNum: "KO-8247-L", specices: "Kozbians", homePlanet: "Kozbia", crime: "Redacted", img: "images/speed_typing/prisoners/Kozbians.png"},
+    
+    //9
+    {idNum: "ZE-1990-A", specices: "Zerillians", homePlanet: "Zerillia", crime: "Redacted", img: "images/speed_typing/prisoners/Zerillians.png"},
+    
+    //10
+    {idNum: "BO-4800-R", specices: "Borpocians", homePlanet: "Borpocia", crime: "Redacted", img: "images/speed_typing/prisoners/Borpocians.png"},
+    
+    //11
+    {idNum: "DR-7165-N", specices: "Drumbloxians", homePlanet: "Drumbloxia", crime: "Redacted", img: "images/speed_typing/prisoners/Drumbloxians.png"},
+    
+    //12
+    {idNum: "SM-3456-E", specices: "Smarkians", homePlanet: "Smarkia", crime: "Redacted", img: "images/speed_typing/prisoners/Smarkians.png"},
+    
+    //13
+    {idNum: "QU-2254-T", specices: "Quadropians", homePlanet: "Quadropia", crime: "Redacted", img: "images/speed_typing/prisoners/Quadropians.png"},
+    
+    //14
+    {idNum: "BO-7600-D", specices: "Boobloosians", homePlanet: "Boobloosia", crime: "Redacted", img: "images/speed_typing/prisoners/Boobloosians.png"},
+    
+    //15
+    {idNum: "KO-1828-P", specices: "Korblockians", homePlanet: "Korblockia", crime: "Redacted", img: "images/speed_typing/prisoners/Korblockians.png"},
+    
+    //16
+    {idNum: "PR-7179-M", specices: "Pripudlians", homePlanet: "Pripudlia", crime: "Redacted", img: "images/speed_typing/prisoners/Pripudlians.png"}];

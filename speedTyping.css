@@ -1,0 +1,199 @@
+/*--------------Game 1: Speed Typing--------------*/
+html.speed-typing{
+  /* background-color: black; */
+  height: 100%;
+  font-family: pixelated;
+}
+
+body.speed-typing{
+  background-image: url("images/speed_typing/galactic federation computer screen.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: 15px solid #504440;*/
+  overflow: hidden;
+}
+
+#prisoner-database-title{
+  font-family: pixelated;
+  color: #fa9b90;
+  text-align: center;
+  background-color: #ec4c3b;
+  font-size: 200%;
+  margin-top: 0px;
+  opacity: 85%;
+}
+
+ /* #returnHome {
+
+ } */
+
+/* dealing with the screen cover and it's elements */ 
+.screenCover {
+  background: rgba(0, 0, 0, 0.8);
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+}
+
+#speed-typing-start-screen{
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#speed-typing-instructions{
+  background: #2cc551;
+  border: 2px solid lightgreen;
+  font-family: pixelated;
+  color: white;
+  padding-left: 1.5em;
+}
+
+#speed-typing-instructions ul {
+  margin-left: 1.5em;
+  font-size: 24px;
+  list-style-image: url("/images/speed_typing/bullet.gif");
+}
+
+#speed-typing-instructions li:nth-child(5) {
+  text-align: center;
+  list-style-image: none;
+}
+
+.start {
+  margin-top: 10px;
+  width: 150px;
+  font-family: pixelated;
+  background-color: #2cc551 !important;
+  }
+
+.congratulation-screen {  
+  z-index: 4;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+ /*  background-color: rgba(0, 0, 0, 0.8); */
+ background-color: rgba(236, 76, 59, 0.8);
+  border: #fa9b90 5px solid;
+   color: darkred;
+}
+
+.congratulation-screen h4 {
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.congratulation-screen p {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.congratulation-screen .reset, .back-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.toggle {
+  background-color: rgba(44, 197, 81, 0.8);
+  border: greenyellow 5px solid;
+   color: white;
+}
+
+
+#timer{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  font-family: pixelated;
+  margin-top: 5px;
+  
+}
+
+#prison-screen-content{
+  width: 100%;
+  /* position: relative; */
+  /* top: 40%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  text-align: center;
+}
+
+#inmate-pic{
+  display: inline-block;
+  width: 55%;
+  height: 600px;
+  border: 3px solid greenyellow;
+  /* opacity: 75%; */
+  background-color: black;
+}
+
+#prisoner-id-on-pic{
+  color: white;
+  margin-top: -45px;
+  font-family: pixelated;
+}
+
+#inmate-info-screen{
+  display: inline-block;
+  width: 35%;
+  height: 600px;
+  border-top: 20px solid greenyellow;
+  border-left: 3px solid greenyellow;
+  border-bottom: 3px solid greenyellow;
+  border-right: 3px solid greenyellow;
+  vertical-align: top;
+  color: white;
+  font-family: pixelated;
+  background-color: #2cc551;
+  opacity: 75%
+}
+
+.prisoner-id{
+  width: 90%;
+  color: white;
+  font-family: pixelated;
+  font-size: 180% !important;
+  border: 3px solid greenyellow;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* #return-arrow{
+  width: 0px;
+  height: 0px;
+  border-top: 60px solid transparent;
+  border-left: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-right: 60px solid white;
+} */
+
+#red-return-arrow{
+  height: 100px;
+  width: 150px;
+  /* margin-top: 0.6vh; */
+}
+
+@keyframes sum {
+0% {
+opcaity: 0%;
+} 
+100% {
+  opacity: 100%;
+}
+
+}
+
+@font-face{
+  font-family: pixelated;
+  src: url("fonts/slkscre.ttf");
+}
+

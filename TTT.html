@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="tic-tac-toe">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="TTT.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+
+	</script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+
+	</script>
+	<script src="TTT.js">
+
+	</script>
+</head>
+
+<!-- Tamika & Hakeem -->
+
+<body class="tic-tac-toe">
+
+	<!-- start button with instructions -->
+	<div class="screenCover" id="screenCover">
+		<div id="ttt-start-screen" class="container">
+			<div id="ttt-instructions" class="row">
+				<h4 style="color:white;"> Instructions:</h4>
+				<p style="color:white;">
+					Similar to Tic-Tac-Toe, you must get 3 in a row, column or diagonal. Your task is to achieve this 3 times against Gearhead.
+
+          Succeed and you will be rewarded with part of the code. 
+				</p>
+			</div>
+
+			<div class="row">
+				<button class="start btn col s4 offset-s4">
+          Start Game
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- congratulation screen with back buttton -->
+	<div class="congratulation-screen">
+    <div class="inside">
+       <p>Great You've Won Against GearMan! Bot! Guy! Whatever his name is! Now take your code and skidaddle.</p>
+       <h4 id="TTTCode"></h4>
+    <div class="back-button">
+      <a class="btn" href="index.html">Back</a>
+    </div>
+    </div>
+   
+  </div>
+
+  <!-- tic tac toe game screen -->
+  <div  class="row">
+    <a id="returnHome" href="index.html"><img id="pink-return-arrow" src="images/tic_tac_toe/pink return arrow.png" alt=""></a>
+  </div>
+
+  <div id="ttt-main-screen" class="container">  
+
+    <div class="row">
+      <!-- player tally -->
+      <div id="player-tally" class="col s1">
+        <p id="player-name">You</p>
+        <p id="player-w-l">W/L</p>
+      </div>
+
+      <!-- game board -->
+      <div id="ttt-board" class="container col s10">
+        <div class="rowone row" style="margin-bottom:0"> 
+          <img id="quad1" class="quad col s2 offset-s4"></img>
+          <img id="quad2" class="quad col s2"></img>
+          <img id="quad3" class="quad col s2"></img>
+        </div>
+
+        <div class="rowtwo row" style="margin-bottom:0">
+          <img id="quad4" class="quad col s2 offset-s4" style="margin-top:0"></img>
+          <img id="quad5" class="quad col s2" style="margin-top:0"></img>
+          <img id="quad6" class="quad col s2" style="margin-top:0"></img>    
+        </div>
+
+        <div class="rowthree row" style="margin-bottom:0">
+         <img id="quad7" class="quad col s2 offset-s4" style="margin-top:0"></img>
+          <img id="quad8" class="quad col s2" style="margin-top:0"></img>
+          <img id="quad9" class="quad col s2" style="margin-top:0"></img>    
+        </div>   
+      </div>
+        
+      <!-- robot tally -->
+      <div id="robot-tally" class="col s1 offset-s1">
+        <p id="robot-name">Gearhead</p>
+        <p id="robot-w-l">W/L</p>
+      </div>
+    </div>
+
+    <!-- display whose turn -->
+    <div id="whosturn" class="row col s8 offset-s2">
+      <p class="turn-display"> Player's Turn</p>
+    </div>
+
+    <!-- display robot dialogue -->
+    <div id="robot-dialogue" class="row col s6 offset-s3">
+      <p class ="dialogue">- - -</p>
+    </div>
+  </div>  
+
+</body>
+</html>

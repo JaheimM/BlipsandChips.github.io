@@ -1,0 +1,161 @@
+$(document).ready(function(){ 
+
+  // $(".start").click(function(){
+  //   let $newdiv = $("<div>", {class: ""}) 
+  //   for(let i=0; i<=9; i++){
+
+  //     $("p").append(" <div></div>.");
+  //   }
+  // });
+
+// var $div = $("<div>", {id: "foo", "class": "a"});
+// $div.click(function(){ /* ... */ });
+// $("#box").append($div);
+
+
+let turn = false;
+
+//jahiem
+let gameActive = false;
+let playerWins = 0;
+let robotWins = 0;
+
+
+ $('.start').click(function(){
+  
+    gameActive = true;
+    console.log(gameActive)
+  $(".dialogue").html("Let's begin")
+
+})
+
+
+// Ray and Jahiem 
+const winConditions = [
+  ["quad1", "quad2", "quad3"],
+  ["quad1", "quad5", "quad9"],
+  ["quad7", "quad8", "quad9"],
+  ["quad4", "quad5", "quad6"],
+  ["quad3", "quad5", "quad7"],
+  ["quad1", "quad4", "quad7"],
+  ["quad2", "quad5", "quad8"],
+  ["quad3", "quad6", "quad9"]
+]
+
+//Number of moves at start of game is 0
+let moves = 0;
+
+$('.quad').click(function(){
+   if(gameActive){
+  // Referenced Juan and Ray Onishi tic-Tac-Toe code
+  var hasBeenClicked = $(this).hasClass("X") || $(this).hasClass("O");
+
+  /* (jahiem) Errors I had while trying to implement cpu: 
+  
+  Error: no matter if X or O wins it will always change the dialogue to if the robot has won
+
+  Error: For some reason if you keep on playing after the game resets X plays first and O second. (Error if you want the user to always be the same and letter and go first)
+
+  Errors I fixed: Game will not reset when a tie occurs, Changed to when it's O, screen will display player turn instead of cpu turn
+ */
+
+    // If the grid hasn't been clicked, then execute below
+    if(!hasBeenClicked){
+      // Write code to check which quad was clicked 
+      // Then remove the quad # from the list of available numbers
+
+        
+      // turn true => player X
+      //will add one to moves
+      moves++
+      console.log("test")
+      if(turn){
+        // let cpuMove = Math.floor(Math.random() * availableNum.size) + 1; //cpu chooses move
+        // Add in the X into the grid
+        $(this).text("X");
+        // Give that grid the class X 
+        $(this).addClass("X");
+         $('#whosturn').html("Players Turn");
+      }
+      else {
+        // Add in the O into the grid 
+        $(this).text("O");
+        // Give that grid the class O
+        $(this).addClass("O");
+        console.log($(this).attr('id'));
+       $('#whosturn').html("CPU Turn");
+         console.log($(this).attr('id'));
+      
+      }
+      // Flip between the two players
+      turn = !turn;
+      if (moves == 9) {
+        $('.dialogue').html("I will not stand for this! AGAIN!");
+           $('.quad').removeClass("X")
+           $('.quad').removeClass("O")
+           $('.quad').text(".")
+           moves = 0;
+      } 
+    }
+  
+     
+    
+    console.log(moves)
+  
+  // Ray and Jahiem
+
+  
+  //For loop that goes through each quad and checks if textcontent is X or O for who won
+for(let i = 0;i<winConditions.length;i++){
+  if ($( "#" + winConditions[i][0]).text() == $("#" + winConditions[i][1]).text() && $("#" + winConditions[i][1]).text() == $( "#" + winConditions[i][2]).text() && 
+  ($("#" + winConditions[i][0]).text() == "X" || $("#" + winConditions[i][0]).text() == "O")) {
+//Conditional statement for if user wins or loses
+    $('.quad').removeClass("X")
+    $('.quad').removeClass("O")
+    $('.quad').text(".")
+    moves = 0;
+    if ($("#" + winConditions[i][0]).text() == "O" ) {
+      playerWins++
+      $(".dialogue").html("I won't allow you to win again.")
+      $('#player-w-l').html(playerWins);
+      //After the user or cpu wins, the tiles will reset by removing the letters X and O from the quads
+    } else {
+      robotWins++
+      $(".dialogue").html("Foolish human you will never beat me.")
+      $('#robot-w-l').html(robotWins);
+    }
+  }
+}
+//If someone has won can reset game using start button
+
+   }
+})
+  let availableNum = [1,2,3,4,5,6,7,8,9];
+
+
+
+
+
+
+
+
+
+if ($("#" + winConditions[i][0]).attr("src") == $("#" + winConditions[i][1]).attr("src") && $("#" + winConditions[i][1]).text() == $("#" + winConditions[i][2]).text() && ($("#" + winConditions[i][0]).text() == "O" || $("#" + winConditions[i][0]).text() == "X")) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});

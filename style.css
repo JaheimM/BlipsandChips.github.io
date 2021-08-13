@@ -1,0 +1,345 @@
+/* Tamika Dantes */
+.update-message{
+  font-family: pixelated;
+  color: #51a48e;
+  text-align: center;
+}
+
+/*--------------Main Screen: Splash Screen--------------*/
+/* Tamika Dantes */
+#tag-line-1{
+  margin-top:-30px;
+  color:#51a48e; 
+  font-family: claire-hand;
+}
+
+#tag-line-2{
+  margin-top:-5px; 
+  color:#9b53b8; 
+  font-family: claire-hand;
+}
+
+.splash, #sp2{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 200;
+  color: white;
+  text-align: center;
+}
+
+#sp1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 201;
+  text-align: center;
+}
+
+#sticky-note {
+  border-bottom:1px ridge black;
+  border-right:1px ridge black;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 2px;
+  position: absolute;
+  min-width: 150px;
+  min-height: 120px;
+  padding: 5px;
+  background-color: yellow;
+}
+
+#portal{
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: shrink;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite; //used for spin
+  animation-timing-function: linear;  */
+}
+
+#sticky-note{
+  
+  background-color: yellow;
+  color: red;
+}
+
+
+@keyframes shrink {
+  from {height: 790px;
+  		  width: 930px;
+  }
+  to {height: 39.5px;
+  	  width: 46.5px; 
+  }
+}
+
+/* @keyframes spin {
+    from { transform: rotate(0deg); }//used for spin
+    to { transform: rotate(360deg); }
+
+} */
+
+.splash.display-none , #sp2.display-none, #sp1.close-portal{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -10;
+  color: white;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+@keyframes fadeIn{
+  to{
+    opacity: 1;
+  }
+}
+
+.fade-in{
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+@font-face{
+  font-family: claire-hand;
+  src: url("fonts/ClaireHandRegular.ttf");
+}
+
+/*--------------Main Screen--------------*/
+html{
+  height: 100vh;
+}
+
+body{
+  background-image: url("images/main_screen/grid.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: pixelated;
+}
+
+#arcade-machine{
+  display: inline-block;
+  width: 50%;
+  position: absolute;
+  margin-left: 5vw; 
+}
+
+#top{
+  height: 6.5vh;
+  width: 58.3vw;
+  margin-left: -4.2vw;
+  background-color: #267784;
+  border-left: 1vw solid black;
+  border-bottom: 1vw solid black;
+  border-right: 1vw solid black;
+}
+
+#bottom-of-top{
+  margin-bottom: -15.5vh;
+  border-top: 15vh solid #611560;
+  border-left: 4.1vw solid transparent;
+  border-right: 4.1vw solid transparent;
+  margin-left: -4.2vw;
+  height: 0;
+  width: 58.3vw;
+}
+
+#outter-screen{
+  height: 55vh;
+  width: 50vw;
+  background-color: #7e267c;
+  margin-top: 15vh;
+  margin-bottom: -1vh;
+}
+
+/* stick of joystick */
+#outter-screen::before{
+  content: "";
+  position: absolute;
+  margin-top: 53vh;
+  margin-left: 23.3vw;
+  height: 10vh;
+  width: 1vw;
+  background-color: black;
+}
+
+/* ball of joystick */
+#outter-screen::after{
+  content: "";
+  position: absolute;
+  margin-top: 50vh;
+  margin-left: 21.9vw;
+  height: 7vh;
+  width: 4vw;
+  background-color: #a51a19;
+  border-radius: 50%;
+}
+
+#inner-screen{
+  height: 45vh;
+  background-color: black;
+  width: 90%; 
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  white-space: nowrap;
+  font-size: clamp(1rem, 3vw, 3rem);
+}
+
+#game-title{
+  color: white;
+  position: relative;
+  margin-top: 0vh;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+.game-selection{
+  color: white;
+  margin-left: 8.5vw;
+  position: relative;
+}
+
+.game-selection:hover{
+  color: #facb73;
+}
+
+#c-p-select{
+  color: #d6391b;
+  margin-left: 8.5vw;
+  position: relative;
+}
+#dotChase {
+  color:grey;
+}
+#dotChase:hover {
+  color: #facb73;
+  cursor: pointer;
+}
+
+#c-p-select:hover{
+  color: red;
+  cursor: pointer;
+}
+
+#control-panel {
+  border-bottom: 25vh solid #267784;
+  border-left: 4.1vw solid transparent;
+  border-right: 4.1vw solid transparent;
+  margin-left: -4.2vw;
+  height: 0;
+  width: 58.3vw;
+}
+
+/* buttons */
+#control-panel::before {
+  content: "";
+  position: absolute;
+  width: 5vw;
+  height: 5vh;
+  /* background-color: red; */
+  border-radius: 5vw/5vh;
+  box-shadow: 5vw 7vh 0 0 #045c31,
+              4.9vw 8vh 0 0 #023512, /*shadow*/
+              13vw 10vh 0 0 #1b4c99,
+              12.9vw 11vh 0 0 #121e5f, /*shadow*/
+              18vw 15vh 0 0 #1b4c99,
+              17.9vw 16vh 0 0 #121e5f, /*shadow*/
+              25vw 15vh 0 0 #1b4c99,
+              24.9vw 16vh 0 0 #121e5f, /*shadow*/
+              30vw 10vh 0 0 #1b4c99,
+              29.9vw 11vh 0 0 #121e5f, /*shadow*/
+              38vw 7vh 0 0 #a51a19,
+              37.9vw 8vh 0 0 #660703; /*shadow*/
+
+} 
+
+/* base of joystick */
+#control-panel::after{
+  content: "";
+  position: absolute;
+  width: 10vw;
+  height: 5vh;
+  /* background-color: grey;
+  margin-left: 19vw;
+  margin-top: 5vh; */
+  border-radius: 5vw/2.5vh;
+  box-shadow: 19vw 5vh black;
+} 
+
+#code-panel{
+  display: inline-block;
+  width: 20%; 
+  opacity: 70%;
+  margin-left: 65vw;
+  margin-top: 20vh;
+  background-color: #148985;
+  padding: 15px;
+  border-radius: 15%;
+}  
+
+#num-display{
+  border: 2px solid white;
+  border-radius: 15%;
+  color: white;
+}
+
+#num-text{
+  color: white;
+  font-size: clamp(1.75rem, 4.75vw, 4.75rem);
+  font-family: pixelated;
+  margin-top: 1vh;
+}
+
+/* Removes arrows on input box when type="number". Source: W3Schools*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body .btn-large{
+  font-family: pixelated;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  border-radius: 20%;
+}
+
+#clear-btn, #submit-btn{
+  font-size: clamp(0.5rem, 1vw, 1rem);
+}
+
+@font-face{
+  font-family: pixelated;
+  src: url("fonts/slkscre.ttf");
+}
+
+
+
+
+
+
