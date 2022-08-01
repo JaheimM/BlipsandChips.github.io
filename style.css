@@ -203,31 +203,90 @@ body{
   overflow: auto;
   white-space: nowrap;
   font-size: clamp(1rem, 3vw, 3rem);
+  overflow: hidden;
 }
+
+/* Ipad media size */
+@media (max-width: 768px) {
+  
+.options {
+  height: 60%;
+}
+
+ .options p {
+  margin-top: 2em;
+} 
+}
+
+@media (max-width: 481px) {
+  .options {
+  height: 90%;
+}
+
+ .options p {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 100%;
+} 
+}
+
 
 #game-title{
   color: white;
-  position: relative;
-  margin-top: 0vh;
+  position: absolute;
+  margin: 0;
   text-align: center;
+  width: 100%;
   font-size: clamp(2rem, 5vw, 5rem);
 }
 
-.game-selection{
-  color: white;
-  margin-left: 8.5vw;
+.options {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
-.game-selection:hover{
+.game-selection, #c-p-select {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.down-select, .up-select {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 15%;
+  left: 45%;
+  font-size: 1.8em;
+  transform: rotate(90deg);
+}
+
+.up-select {
+  bottom: 70%;
+  margin: 0;
+  transform: rotate(-90deg);
+}
+
+/* Used for keyboard selection to show highlighted color */
+.hold-key:active {
   color: #facb73;
+}
+
+.game-selection:hover, .down-select:hover, .up-select:hover{
+ color: #facb73;
+  cursor: pointer;
 }
 
 #c-p-select{
   color: #d6391b;
-  margin-left: 8.5vw;
-  position: relative;
+  margin-bottom: 0;
 }
+
 #dotChase {
   color:grey;
 }
