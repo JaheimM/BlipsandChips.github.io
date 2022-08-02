@@ -15,7 +15,6 @@ $(document).ready(function () {
     $(".fade-in-out").fadeOut();
   }, 550);
 
-
   // Forces user to interact to activate audio
   if ($("#enter-screen").is(":visible")) {
     $(".options").hide();
@@ -37,9 +36,17 @@ $(document).ready(function () {
     soundOne.play();
   });
 
-  $("#speedTyping[href]").click(function (e) {
-    e.preventDefault();
+  $(".game-selection[href]").click(function (e) {
     confirmSound.play();
+    e.preventDefault();
+    if (this.href) {
+      let target = this.href;
+      $(".main-screen").fadeOut("1000", function () {
+        setTimeout(function () {
+          window.location = target;
+        }, 1000);
+      });
+    }
   });
 
   // Use array to hold all classes/options
