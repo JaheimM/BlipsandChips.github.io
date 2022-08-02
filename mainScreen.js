@@ -9,6 +9,24 @@ $(document).ready(function () {
   const soundOne = new Audio("audio/cursor_style_2.mp3");
   const confirmSound = new Audio("audio/game-start.mp3");
 
+  // Flashing sound
+  setInterval(function () {
+    $(".fade-in-out").fadeIn();
+    $(".fade-in-out").fadeOut();
+  }, 550);
+
+  // Forces user to interact to activate audio
+  if ($("#enter-screen").is(":visible")) {
+    $(".options").hide();
+    $("#game-title").hide();
+  }
+
+  $("#enter-screen").click(function () {
+    $("#enter-screen").hide();
+    $(".options").show();
+    $("#game-title").show();
+  });
+
   //On mouseover will play audio
   $(".game-selection").mouseover(function () {
     soundOne.play();
@@ -18,8 +36,17 @@ $(document).ready(function () {
     soundOne.play();
   });
 
-  $(".game-selection").click(function () {
+  $(".game-selection[href]").click(function (e) {
     confirmSound.play();
+    e.preventDefault();
+    if (this.href) {
+      let target = this.href;
+      $(".main-screen").fadeOut("1000", function () {
+        setTimeout(function () {
+          window.location = target;
+        }, 1000);
+      });
+    }
   });
 
   // Use array to hold all classes/options
@@ -33,7 +60,6 @@ $(document).ready(function () {
   $("#dotChase").hide();
   $("#c-p-select").hide();
 
- 
   function keyPress() {
     $(document).keyup(function (e) {
       let keyPressed = e.key;
@@ -65,10 +91,15 @@ $(document).ready(function () {
             $("#dotChase")[0].click();
           }, 1000);
         });
+      } else if (keyPressed === "Enter" && $("#enter-screen").is(":visible")) {
+        $("#enter-screen").hide();
+        $(".options").show();
+        $("#game-title").show();
       }
 
       // Key controls
       if (keyPressed === "ArrowUp" || keyPressed === "w") {
+        soundOne.play();
         currentOption--;
 
         /*    $(document).keydown(function () {
@@ -95,6 +126,7 @@ $(document).ready(function () {
       }
 
       if (keyPressed === "ArrowDown" || keyPressed === "s") {
+        soundOne.play();
         currentOption++;
         if (currentOption === 2) {
           $(".up-select").show();
