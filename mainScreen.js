@@ -28,11 +28,11 @@ $(document).ready(function () {
   });
 
   //On mouseover will play audio
-  $(".game-selection").mouseover(function () {
+  $(".up-select").click(function () {
     soundOne.play();
   });
 
-  $("#c-p-select").mouseover(function () {
+  $(".down-select").click(function () {
     soundOne.play();
   });
 
