@@ -15,6 +15,8 @@ $(document).ready(function () {
     "images/main_screen/muted.svg",
   ];
 
+  menuMusic.volume = 0.5;
+
   //Mute toggle
   let muted = false;
   $(".icon").click(function () {
@@ -52,7 +54,7 @@ $(document).ready(function () {
     menuMusic.loop = true;
   });
 
-  // Mute toggle
+  
 
   //Selection sound effect on click
   $(".up-select").click(function () {
@@ -92,6 +94,12 @@ $(document).ready(function () {
       let keyPressed = e.key;
       console.log(keyPressed);
 
+     
+      $('.up-select').keydown(function () {
+        $(".up-select").addClass("active");
+      })
+      
+
       // If user presses enter, trigger click event to simulate entering a game
       // jquery ignores href using [0] will call the native DOM method
       if (keyPressed === "Enter" && options[0].is(":visible")) {
@@ -122,17 +130,15 @@ $(document).ready(function () {
         $("#enter-screen").hide();
         $(".options").show();
         $("#game-title").show();
+        menuMusic.play();
+        menuMusic.loop = true;
       }
 
       // Key controls
       if (keyPressed === "ArrowUp" || keyPressed === "w") {
         soundOne.play();
         currentOption--;
-
-        /*    $(document).keydown(function () {
-          $(".up-select").addClass("hold-key");
-        }); */
-
+        $(".up-select").removeClass("active");
         if (currentOption == 1) {
           $(".up-select").hide();
           $("#speedTyping").show();
