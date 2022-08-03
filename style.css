@@ -266,6 +266,8 @@ body{
   position: relative;
   height: 100%;
   width: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .icon {
@@ -273,6 +275,7 @@ body{
   top: 70%;
   width: 70px;
   height: 70px;
+  margin-bottom: 1.5em;
 }
 
 .game-selection, #c-p-select {
@@ -292,16 +295,16 @@ body{
   left: 45%;
   font-size: 1.8em;
   transform: rotate(90deg);
+  margin: 0;
 }
 
 .up-select {
   bottom: 70%;
-  margin: 0;
   transform: rotate(-90deg);
 }
 
 /* Used for keyboard selection to show highlighted color */
-.hold-key:active {
+.active {
   color: #facb73;
 }
 

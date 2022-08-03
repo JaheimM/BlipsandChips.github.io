@@ -26,7 +26,7 @@ $(document).ready(function () {
       muted = true;
       menuMusic.muted = true;
     } else {
-       $(".icon").attr("src", muteIcons[0]);
+      $(".icon").attr("src", muteIcons[0]);
       muted = false;
       menuMusic.muted = false;
     }
@@ -53,8 +53,6 @@ $(document).ready(function () {
     menuMusic.play();
     menuMusic.loop = true;
   });
-
-  
 
   //Selection sound effect on click
   $(".up-select").click(function () {
@@ -90,15 +88,20 @@ $(document).ready(function () {
   $("#c-p-select").hide();
 
   function keyPress() {
+    $(document).keydown(function (e) {
+      if (e.key === "ArrowUp") {
+        $(".up-select").addClass("active");
+      } else if (e.key === "ArrowDown") {
+        $(".down-select").addClass("active");
+      }
+    });
+
     $(document).keyup(function (e) {
       let keyPressed = e.key;
       console.log(keyPressed);
 
-     
-      $('.up-select').keydown(function () {
-        $(".up-select").addClass("active");
-      })
-      
+      $(".up-select").removeClass("active");
+      $(".down-select").removeClass("active");
 
       // If user presses enter, trigger click event to simulate entering a game
       // jquery ignores href using [0] will call the native DOM method
@@ -138,7 +141,6 @@ $(document).ready(function () {
       if (keyPressed === "ArrowUp" || keyPressed === "w") {
         soundOne.play();
         currentOption--;
-        $(".up-select").removeClass("active");
         if (currentOption == 1) {
           $(".up-select").hide();
           $("#speedTyping").show();
