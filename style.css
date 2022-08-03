@@ -53,6 +53,7 @@
   min-height: 120px;
   padding: 5px;
   background-color: yellow;
+  z-index: 1;
 }
 
 #portal{
@@ -152,6 +153,7 @@ body{
   margin: 0;
   padding: 0;
 }
+
 
 #arcade-machine{
   display: inline-block;
@@ -264,6 +266,13 @@ body{
   position: relative;
   height: 100%;
   width: 100%;
+}
+
+.icon {
+  position: absolute;
+  top: 70%;
+  width: 70px;
+  height: 70px;
 }
 
 .game-selection, #c-p-select {

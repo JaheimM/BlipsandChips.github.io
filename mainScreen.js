@@ -8,11 +8,34 @@ $(document).ready(function () {
 
   const soundOne = new Audio("audio/cursor_style_2.mp3");
   const confirmSound = new Audio("audio/game-start.mp3");
+  const menuMusic = new Audio("audio/menu-music.mp3");
 
-  // Flashing sound
+  const muteIcons = [
+    "images/main_screen/Mute-not-on.svg",
+    "images/main_screen/muted.svg",
+  ];
+
+  //Mute toggle
+  let muted = false;
+  $(".icon").click(function () {
+    if (muted === false) {
+      $(".icon").attr("src", muteIcons[1]);
+
+      muted = true;
+      menuMusic.muted = true;
+    } else {
+       $(".icon").attr("src", muteIcons[0]);
+      muted = false;
+      menuMusic.muted = false;
+    }
+  });
+
+  // Flashing text
   setInterval(function () {
     $(".fade-in-out").fadeIn();
     $(".fade-in-out").fadeOut();
+    $("#game-title").fadeIn();
+    $("#game-title").fadeOut();
   }, 550);
 
   // Forces user to interact to activate audio
@@ -25,9 +48,13 @@ $(document).ready(function () {
     $("#enter-screen").hide();
     $(".options").show();
     $("#game-title").show();
+    menuMusic.play();
+    menuMusic.loop = true;
   });
 
-  //On mouseover will play audio
+  // Mute toggle
+
+  //Selection sound effect on click
   $(".up-select").click(function () {
     soundOne.play();
   });
